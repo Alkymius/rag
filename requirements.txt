@@ -3,3 +3,4 @@ chromadb==1.5.2
 sentence-transformers==5.2.3
 groq==1.0.0
 pypdf>=3.0.0
+python-dotenv>=1.0.0
