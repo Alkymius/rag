@@ -6,15 +6,18 @@ sentence-transformers==5.2.3
 groq==1.0.0
 pypdf
 
-VARIABILE D'AMBIENTE OBBLIGATORIA:
-GROQ_API_KEY
-Per macOS / Linux:
-export GROQ_API_KEY="tua_chiave"
-Per Windows (PowerShell):
-setx GROQ_API_KEY "tua_chiave"
+DA FARE PRIMA DELL'AVVIO:
+Copia .env.example
+Rinominalo in .env
+Inserisci la tua chiave Groq
 
 AVVIO:
 chainlit run main.py
+
+DOMANDE D'ESEMPIO (relative al file di prova):
+Cos'è il gruppo di un nodo?
+Cosa sai dei nodi torici?
+Tutti i nodi hanno una superficie di Seifert?
 
 STRUTTURA GENERALE:
 Il chatbot possiede un sistema di Retrieval-Augmented Generation (RAG) che procede nelle seguenti fasi:
@@ -29,3 +32,4 @@ Al caricamento del file:
 Upload del file -> lettura del testo -> normalizzazione -> suddivisione in chunk -> calcolo embeddings (locale) -> salvataggio in ChromaDB con metrica cosine
 Alla domanda dell'utente:
 Domanda utente -> embedding della query -> retrieval top-k su Chroma -> filtro di qualità (soglia distanza) -> selezione e limitazione del contesto -> inserimento del contesto nel prompt (augmentation) -> chiamata al LLM via Groq -> risposta
+
