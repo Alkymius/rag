@@ -3,6 +3,8 @@ import re
 import uuid
 from typing import List, Tuple, Dict, Any
 
+from dotenv import load_dotenv
+
 import chainlit as cl
 from groq import Groq
 
@@ -11,6 +13,8 @@ from chromadb.config import Settings
 
 from sentence_transformers import SentenceTransformer
 from pypdf import PdfReader
+
+load_dotenv()
 
 
 _EMBED_MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
