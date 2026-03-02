@@ -14,6 +14,9 @@ Inserisci la tua chiave Groq
 AVVIO:
 chainlit run main.py
 
+FILE DI PROVA:
+Introduzione_alla_teoria_dei_nodi.pdf
+
 DOMANDE D'ESEMPIO (relative al file di prova):
 Cos'è il gruppo di un nodo?
 Cosa sai dei nodi torici?
