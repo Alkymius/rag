@@ -215,7 +215,7 @@ def answer_with_groq(question: str, context_chunks: List[str]) -> str:
     system = (
         "Rispondi usando solo il contenuto fornito. "
         "Se non ci sono informazioni sufficienti nel contenuto, dillo chiaramente. "
-        "Quando possibile, cita brevemente un passaggio e la sua FONTE."
+        "Quando possibile, cita brevemente un passaggio e la sua fonte."
     )
     user = f"CONTENUTO:\n{context}\n\nDOMANDA:\n{question}\n"
     resp = client.chat.completions.create(
